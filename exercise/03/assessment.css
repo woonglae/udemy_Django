@@ -1,0 +1,49 @@
+body {
+    background-color: skyblue;
+}
+
+h1 {
+    border: black solid;
+    border-width: 1px;
+}
+
+#thanks {
+    background-color: blanchedalmond;
+}
+
+#purple {
+    color: purple;
+}
+
+.overline {
+    text-decoration: overline;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+#red {
+    color: red;
+}
+
+#textarea {
+    border: gray solid;
+    border-width: 5px;
+}
+
+.input {
+    border: purple solid;
+    border-width: 2px;
+}
+
+div {
+    background-color: blue;
+    border: blanchedalmond;
+    border-style: dashed;
+    border-width: 5px;
+}
+
+div p {
+    background-color: blanchedalmond;
+}
