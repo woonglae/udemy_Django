@@ -1,0 +1,35 @@
+h1 {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+
+}
+
+.art {
+    margin:auto;
+}
+
+th {
+    height : 300px;
+    width: 150px;
+}
+
+
+#a {
+    background: #247BA0;
+}
+
+#b {
+    background: #70C1B3;
+}
+
+#c {
+    background: #B2DBBF;
+}
+
+#d {
+    background: #F3FFBD;
+}
+
+#e {
+    background: #FF1654;
+}
