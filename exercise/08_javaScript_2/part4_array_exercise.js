@@ -8,12 +8,19 @@ var roster = []
 // Create the functions for the tasks
 
 // ADD A NEW STUDENT
+function add(name) {
+    roster.push(name)
+}
 
 // Create a function called addNew that takes in a name
 // and uses .push to add a new student to the array
 
 
 // REMOVE STUDENT
+function remove(name) {
+    var ind = roster.indexOf(name)
+    roster.splice(ind,1)
+}
 
 // Create a function called remove that takes in a name
 // Finds its index location, then removes that name from the roster
@@ -23,10 +30,34 @@ var roster = []
 
 // DISPLAY ROSTER
 
+function display() {
+    console.log(roster.toString())
+}
+
 // Create a function called display that prints out the orster to the console.
 
 
 // Start by asking if they want to use the web app
+var use = prompt("Would you like to start the roster web app? y/n")
 
+if (use === "y") {
+    var cont = ""
+    while (cont !== "quit") {
+        cont = prompt("Please select an action: add, remove, display, or quit.")
+        if (cont === "add") {
+            var addInput = prompt("What name would you like to add?")
+            add(addInput)
+        } else if (cont === "remove") {
+            var removeInput = prompt("What name would you like to remove?")
+            remove(removeInput)
+        } else if (cont === "display") {
+            display()
+        } else if (cont === "quit") {
+            break
+        } else {
+            alert("Please insert add, remove, display, or quit")
+        }
+    }
+}
 // Now create a while loop that keeps asking for an action (add,remove, display or quit)
 // Use if and else if statements to execute the correct function for each command.
