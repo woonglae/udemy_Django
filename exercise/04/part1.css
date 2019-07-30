@@ -1,0 +1,19 @@
+h1 {
+    font-family: arial;
+
+}
+
+p {
+    font-family: monospace;
+}
+/* if text size = 16px
+   1em = 16px
+   2em = 32px (like ratio) */
+
+body {
+    font-size: 10px;
+}
+
+#two {
+    font-size: 2.0em;
+}
