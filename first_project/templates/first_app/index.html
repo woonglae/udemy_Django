@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-{% csrf_token %}
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>First App</title>
-    <link rel="stylesheet" href= "{% static "css/mystyle.css" %}">
+    <title>Django Level Two</title>
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %}">
   </head>
   <body>
-      <h1>Hello This is index.html with static file</h1>
-      {{ insert_me }}
-      <p></p>
-      <img src="{% static "images/photo1.jpeg" %}" alt="CANNOT FOUND">
+    <h1>Hi Welcome to Django Level Two!</h1>
+    <h2>Here are your access records:</h2>
+
+    <div class="djangotwo">
+      {% if access_records %}
+        <table>
+          <thead>
+            <th>Site Name</th>
+            <th>Date Accessed</th>
+          </thead>
+
+
+          {% for acc in access_records %}
+            <tr>
+              <td>{{ acc.name }}</td>
+              <td>{{ acc.date }}</td>
+            </tr>
+          {% endfot %}
+        </table>
+      {% else %}
+        <p>NO ACCESS RECORDS FOUND!</p>
+      {% endif %}
+    </div>
   </body>
 </html>
