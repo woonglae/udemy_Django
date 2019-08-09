@@ -5,10 +5,14 @@ import django
 django.setup()
 
 import random
-from first_app.models import AccessRecord, Webpage, Topic
+from first_app.models import AccessRecord, Webpage, Topic, User
 from faker import Faker
+from faker.providers import person
+from faker.providers import internet
 
 fakegen = Faker()
+fakegen.add_provider(person)
+fakegen.add_provider(internet)
 
 topics = ['Search', 'Social', 'Marketplace', 'News', 'Games']
 
@@ -26,11 +30,15 @@ def populate(N=5):
         fake_url = fakegen.url()
         fake_date = fakegen.date()
         fake_name = fakegen.company()
+        fake_fname = fakegen.first_name()
+        fake_lname = fakegen.last_name()
+        fake_email = fakegen.email()
 
         webpg = Webpage.objects.get_or_create(topic=top, url=fake_url, name=fake_name)[0]
 
         acc_rec = AccessRecord.objects.get_or_create(name=webpg, date=fake_date)[0]
 
+        user = User.objects.get_or_create(fname=fake_fname, lname=fake_lname, email=fake_email)[0]
 
 if __name__=='__main__':
     print("populateing script!")
