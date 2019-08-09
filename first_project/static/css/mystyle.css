@@ -6,3 +6,7 @@ img {
   width: 50%;
   margin: auto;
 }
+
+.djangotwo {
+  border: 3px solid black;
+}

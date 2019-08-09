@@ -8,4 +8,4 @@ def index(request):
     date_dict = {'access_records': webpages_list}
     # my_dict = {'insert_me' : "I am from views.py in first_app"}
     # return render(request, 'first_app/index.html', context=my_dict)
-    return render(request, 'first_app/index.html', context=data_dict)
+    return render(request, 'first_app/index.html', context=date_dict)
