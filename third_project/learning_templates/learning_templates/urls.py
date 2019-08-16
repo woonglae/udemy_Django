@@ -23,6 +23,7 @@ from django.conf.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('other', views.other, name='other'),
-    path('relative', views.relative, name='relative_url_template'),
+    path('basic_app/', include('basic_app.urls')),
+    # path('other', views.other, name='other'),
+    # path('relative', views.relative, name='relative_url_template'),
 ]
